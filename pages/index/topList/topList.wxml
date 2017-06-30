@@ -1,12 +1,12 @@
 <view class="top-list">
-   <view class="back" style="background-image:url(https://y.gtimg.cn/music/photo_new/T002R300x300M0000025Y3Wa1BaFAI.jpg?max_age=2592000)"></view>
+   <view class="back" style="background-image:url({{topinfo.pic_album}})"></view>
    <view class="title">
       <view class="textT">福特新蒙迪欧·流行指数</view>
       <text>{{update_time}} 更新</text>
    </view>
-   <view class="content">
+   <view class="content" style="background:{{deBackgroundColor}}">
       <block wx:for="{{songlist}}" wx:key="item">
-        <view class="entry">
+        <view class="entry" data-xid="{{item.data.songid}}" bindtap="playsongTap"> 
           <text class="left">{{index+1}}</text>
           <view class="right">
             <view class="right-title">{{item.data.songname}}</view>

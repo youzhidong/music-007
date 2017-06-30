@@ -1,0 +1,17 @@
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" controls="{{false}}" id="myAudio" controls loop></audio>
+
+
+<view class="container">
+  <view class="content">
+     <view class="left"></view>
+     <view class="title">
+        <text class="tt">歌曲标题</text>
+        <text class="aut">作者</text>
+     </view>
+     <image src="/images/icon-play.png" class="icon-play"></image>
+  </view>
+
+  <view class="music-gc">
+    fdsfdsfdsfd輠老大哥时第三代技术城标 
+  </view>
+</view>

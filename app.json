@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/topList/topList"
+    "pages/index/topList/topList",
+    "pages/playsong/playsong"
+    
     
   ],
   "window": {
