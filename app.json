@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/topList/topList"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#31c27c",
+    "navigationBarTitleText": "QQ音乐",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": false
+  }
+}
