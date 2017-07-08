@@ -1,4 +1,4 @@
-<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" controls="{{false}}" id="myAudio" controls loop></audio>
+
 
 
 <view class="container">
@@ -8,7 +8,7 @@
         <text class="tt">歌曲标题</text>
         <text class="aut">作者</text>
      </view>
-     <image src="/images/icon-play.png" class="icon-play"></image>
+     <image src="{{IconPath ? '/images/icon-play.png' : '/images/icon-pause.png'}}" class="icon-play" bindtap="palyMusic"></image>
   </view>
 
   <view class="music-gc">

@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/topList/topList",
-    "pages/playsong/playsong"
+    "pages/playsong/playsong",
+    "pages/index/topList/topList"
+    
     
     
   ],

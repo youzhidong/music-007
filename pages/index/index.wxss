@@ -163,3 +163,71 @@ page{
   border-bottom: 1px solid #b2b2b2;
   transform: rotate(-45deg);
 }
+
+
+/*搜索*/
+.search{
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.search-bar{
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #f4f4f4;
+}
+.search-wrap{
+  position: relative;
+  flex: auto;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+.search-wrap .icon-search{
+  margin-right: 10rpx;
+}
+.search-wrap .search-input{
+  flex: auto;
+  font-size: 28rpx;
+}
+.search-cancel{
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+/*热门关键词*/
+.search-hot{
+  padding: 30rpx;
+}
+.hot-title{
+  display: block;
+  margin-bottom: 16rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+  color: rgba(0,0,0,.6);
+}
+.hot-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-item{
+  margin-right: 28rpx;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #000;
+  border: 2rpx solid rgba(0,0,0,.6);
+  border-radius: 200rpx;
+}
+.hot-item.hot{
+  color: #fc4524;
+  border-color: #fc4524;
+}

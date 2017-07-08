@@ -1,11 +1,10 @@
-var util = require('../../../utils/util.js')
-
+var util = require('../../../utils/util.js');
+var app=getApp();
 Page({
   data:{
 
   },
   onLoad:function(opations){
-    //console.log(opations.id);
     var that = this;
     var id = opations.id  //获取ID
     util.getTopListD(id,function(data){
@@ -29,10 +28,12 @@ Page({
     return 'rgb(' + r + ',' + g + ',' + b + ')';
   },
   playsongTap:function(ev){
-    var id = ev.currentTarget.dataset.xid;
-    console.log(id)
+    var id = ev.currentTarget.dataset.xindex;
+    app.globalData.playData = this.data.songlist[id].data;
+    console.log(this.data.songlist[id].data)
+
     wx.navigateTo({
-      url: '../../playsong/playsong?id=' + id,
+      url: '../../playsong/playsong?id='+id,
     })
   }
 })

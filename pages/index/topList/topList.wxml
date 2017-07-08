@@ -6,7 +6,7 @@
    </view>
    <view class="content" style="background:{{deBackgroundColor}}">
       <block wx:for="{{songlist}}" wx:key="item">
-        <view class="entry" data-xid="{{item.data.songid}}" bindtap="playsongTap"> 
+        <view class="entry" data-xindex="{{index}}" bindtap="playsongTap"> 
           <text class="left">{{index+1}}</text>
           <view class="right">
             <view class="right-title">{{item.data.songname}}</view>

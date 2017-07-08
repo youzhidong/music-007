@@ -62,23 +62,46 @@
 
 <!--排行榜-->
 <view hidden="{{navIndex !==1}}">
-  <view class="top">
-    <view class="item" wx:for="{{topList}}" wx:key="unique" data-id="{{item.id}}" bindtap="topList">
-      <view class="media">
-        <image class="img" src="{{item.picUrl}}"></image>
-        <text class="count">{{item.listenCount}}</text>
+    <view class="top">
+      <view class="item" wx:for="{{topList}}" wx:key="unique" data-index="{{index}}" data-id="{{item.id}}" bindtap="topList">
+        <view class="media">
+          <image class="img" src="{{item.picUrl}}"></image>
+          <text class="count">{{item.listenCount}}</text>
+        </view>
+        
+        <view class="info">
+          <text class="title">{{item.topTitle}}</text>
+          <view class="text" wx:for="{{item.songList}}" wx:key="unique">{{index+1}}<text>{{item.songname}}</text>- {{item.singername}}</view>
+        </view>
+        <view class="arrow"></view>
       </view>
-      
-      <view class="info">
-        <text class="title">{{item.topTitle}}</text>
-        <view class="text" wx:for="{{item.songList}}" wx:key="unique">{{index+1}}<text>{{item.songname}}</text>- {{item.singername}}</view>
-      </view>
-      <view class="arrow"></view>
     </view>
-  </view>
-</view> 
+  </view> 
 
-<!--搜索-->
-<view hidden="{{navIndex !== 2}}">
-搜索
-</view> 
+  <!--搜索-->
+  <view hidden="{{navIndex !== 2}}">
+    <view class="search">
+      <view class="search-bar">
+        <view class="search-wrap">
+            <icon type="search" size="16" class="icon-search" />
+            <input type="text" placeholder="搜索歌曲、歌单、专辑" class="search-input" bindinput="bindKeywordInput" />
+        </view>
+        <view class="search-cancel" bindtap="searchResult">搜索</view>
+      </view>
+      <view class="search-hot" hidden="{{searchLoading}}">
+        <text class="hot-title">热门搜索</text>
+        <view class="hot-wrap">
+          <text class="hot-item hot">{{special}}</text>
+          <text class="hot-item" wx:for="{{hotkey}}" wx:key="unique" data-text="{{item.k}}" bindtap="hotkeyTap">{{item.k}}</text>
+        </view>
+      </view>
+
+      <scroll-view scroll-y="true" style="height: 990rpx;" hidden="{{!searchLoading}}" bindscrolltolower="scrollBottom">
+         <text wx:for="{{searchResult}}" data-serchId="{{index}}" bindtap="playmusic">
+         {{item.songname}}
+         </text>
+       </scroll-view>
+
+
+    </view>
+  </view> 
